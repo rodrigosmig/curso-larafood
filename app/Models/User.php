@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Tenant;
+use App\Models\Traits\UserACLTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -10,7 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, UserACLTrait;
 
     /**
      * The attributes that are mass assignable.

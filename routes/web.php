@@ -7,6 +7,11 @@ Route::prefix('admin')
     ->middleware('auth')
     ->group(function() {
 
+      /* Route Tenants
+        */
+        Route::any('tenants/search', 'TenantController@search')->name('tenants.search');
+        Route::resource('tenants', 'TenantController');
+
       /* Route Tables
         */
         Route::any('tables/search', 'TableController@search')->name('tables.search');

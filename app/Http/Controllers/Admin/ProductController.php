@@ -161,7 +161,7 @@ class ProductController extends Controller
                         ->where(function ($query) use ($request) {
                             if ($request->filter) {
                                 $query->orWhere('description', 'LIKE', "%{$request->filter}%")
-                                    ->orWhere('name', $request->filter);
+                                    ->orWhere('title', $request->filter);
                             }
                         })
                         ->latest()
