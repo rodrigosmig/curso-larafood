@@ -4,13 +4,15 @@ namespace App\Providers;
 
 use App\Models\Plan;
 use App\Models\Tenant;
-use App\Models\Category;
 use App\Models\Product;
+use App\Models\Category;
 use App\Observers\PlanObserver;
 use App\Observers\TenantObserver;
-use App\Observers\CategoryObserver;
 use App\Observers\ProductObserver;
+use App\Observers\CategoryObserver;
+use App\Repositories\TenantRepository;
 use Illuminate\Support\ServiceProvider;
+use App\Repositories\Contracts\TenantRepositoryInterface;
 
 class AppServiceProvider extends ServiceProvider
 {

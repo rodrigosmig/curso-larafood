@@ -4,11 +4,18 @@ namespace App\Services;
 
 use App\Models\Plan;
 use App\Models\Tenant;
+use App\Repositories\Contracts\TenantRepositoryInterface;
 
 class TenantService
 {
     private $plan; 
     private $data;
+    private $repository;
+
+    public function __construct(TenantRepositoryInterface $repository)
+    {
+        $this->repository = $repository;
+    }
 
     public function make(Plan $plan, array $data)
     {
@@ -40,5 +47,15 @@ class TenantService
             'email' => $this->data['email'],
             'password' => $this->data['password'],
         ]);
+    }
+
+    public function getAllTenants(int $per_page)
+    {
+        return $this->repository->getAllTenants($per_page);
+    }
+
+    public function getTenantByUuid(String $uuid)
+    {
+        return $this->repository->getTenantByUuid($uuid);
     }
 }
