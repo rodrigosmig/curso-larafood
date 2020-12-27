@@ -26,7 +26,7 @@ class TableController extends Controller
 
     public function show(TenantFormRequest $request, $identify)
     {
-        $table = $this->tableService->getTableByIdentify($identify);
+        $table = $this->tableService->getTableByUuid($identify);
 
         if (! $table) {
             return response()->json(['message' => 'Table Not Found'], 404);

@@ -17,8 +17,8 @@ class UsersTableSeeder extends Seeder
         $tenant = Tenant::first();
 
         $tenant->users()->create([
-            'name' => 'Rodrigo Miguel',
-            'email' => 'rodrigo@gmail.com',
+            'name' => 'Jon Doe',
+            'email' => 'jon@gmail.com',
             'password' => Hash::make('12345678'),
         ]);
     }

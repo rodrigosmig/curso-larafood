@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\Order;
+use App\Models\Client;
+use Illuminate\Database\Eloquent\Model;
+
+class Evaluation extends Model
+{
+    protected $table = 'order_evaluations';
+
+    protected $fillable = [
+        'client_id', 'order_id', 'stars', 'comment'
+    ];
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
+}

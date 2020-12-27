@@ -28,8 +28,8 @@ class TableRepository implements TableRepositoryInterface
         return DB::table($this->table)->where('tenant_id', $id)->get();
     }
 
-    public function getTableByIdentify(string $identify)
+    public function getTableByUuid(string $uudi)
     {
-        return DB::table($this->table)->where('identify', $identify)->first();
+        return DB::table($this->table)->where('uuid', $uudi)->first();
     }
 }

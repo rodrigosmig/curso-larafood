@@ -6,14 +6,14 @@ use App\Models\Tenant;
 
 class ManagerTenant
 {
-    public function getTenantId(): int
+    public function getTenantId()
     {
-        return auth()->user()->tenant_id;
+        return auth()->check() ? auth()->user()->tenant_id : '';
     }
 
     public function getTenant(): Tenant
     {
-        return auth()->user()->tenant;
+        return auth()->check() ? auth()->user()->tenant_id : '';
     }
 
     public function isAdmin(): bool
