@@ -22,7 +22,7 @@ class StoreEvaluationOrderRequest extends FormRequest
             return false;
         }
 
-        return $client->id === $order->client_id;
+        return $client->id == $order->client_id;
     }
 
     /**
