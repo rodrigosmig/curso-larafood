@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ url('css/site.css') }}">
 
-    <link rel="icon" type="image/png" href="{{ url('imgs/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ url('img/favicon.png') }}">
 </head>
 <body>
 

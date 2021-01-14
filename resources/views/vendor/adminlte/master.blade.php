@@ -27,6 +27,8 @@
 	@yield('load_css')
     @yield('meta_tags')
 
+    <link rel="icon" href="{{ url('img/favicon.png') }}" type="image/png">
+
     @if(config('adminlte.use_ico_only'))
         <link rel="shortcut icon" href="{{ asset('favicons/favicon.ico') }}" />
     @elseif(config('adminlte.use_full_favicon'))

@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>Lara</b>Food',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img' => 'img/vue-food.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -167,7 +167,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
 
     'logout_url' => 'logout',
 
@@ -209,8 +209,14 @@ return [
 
     'menu' => [
         [
+            'text' => 'Dashboard',
+            'url'  => 'admin',
+            'icon' => "fas fa-tachometer-alt",
+            'can'  => 'tenants'
+        ],
+        [
             'text' => 'Empresas',
-            'url'  => 'admin/tenants ',
+            'url'  => 'admin/tenants',
             'icon' => "fas fa-building",
             'can'  => 'tenants'
         ],
