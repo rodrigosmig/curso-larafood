@@ -11,7 +11,7 @@ $factory->define(Order::class, function (Faker $faker) {
     return [
         'tenant_id'     => factory(Tenant::class),
         'identify'      => uniqid() . Str::random(10),
-        'total'         => $faker->randomFloat(2),
+        'total'         => 100,
         'status'        => 'open'
     ];
 });
