@@ -200,7 +200,7 @@ class OrderTest extends TestCase
 
         $tenant = factory(Tenant::class)->create();
 
-        factory(Order::class, 10)->create([
+        factory(Order::class, 4)->create([
             'client_id' => $client->id
         ]);
 
@@ -209,6 +209,6 @@ class OrderTest extends TestCase
         ]);
 
         $response->assertStatus(200)
-                ->assertJsonCount(10, 'data');
+                ->assertJsonCount(4, 'data');
     }
 }
