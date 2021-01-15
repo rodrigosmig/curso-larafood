@@ -1,7 +1,8 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Models\Plan;
-use App\Models\Tenant;
 use Illuminate\Database\Seeder;
 
 class TenantsTableSeeder extends Seeder
