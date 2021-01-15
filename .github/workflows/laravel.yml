@@ -30,6 +30,8 @@ jobs:
         touch database/database.sqlite
     - name: Clear Cache Config
       run: php artisan config:clear
+    - name: Migrate
+      run: php artisan migrate
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
