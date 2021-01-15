@@ -9,8 +9,6 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class TenantTest extends TestCase
 {
-    use DatabaseMigrations;
-    
     /**
      * Test Get All Tenants.
      *
